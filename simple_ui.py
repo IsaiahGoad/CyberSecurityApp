@@ -21,7 +21,7 @@ class SystemMonitor(QWidget):
 
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_stats)
-        self.timer.start(3000)
+        self.timer.start(3005) #3000 to 3005 
 
         # Start tshark packet capture in background thread
         self.capture_thread = threading.Thread(target=self.run_tshark_stream, daemon=True)
